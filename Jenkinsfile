@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/medev413/CICD_demo.git'
+                git credentialsId: 'github-token', url: 'https://github.com/medev413/CICD_demo.git'
             }
         }
 
