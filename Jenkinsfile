@@ -7,10 +7,10 @@ pipeline {
 
     stages {
         stage('Clone') {
-            steps {
-                git credentialsId: 'github-token', url: 'https://github.com/medev413/CICD_demo.git'
-            }
-        }
+	    steps {
+		git credentialsId: 'github-token', url: 'https://github.com/medev413/CICD_demo.git', branch: 'main'
+	    }
+	}
 
         stage('Build Docker Image') {
             steps {
